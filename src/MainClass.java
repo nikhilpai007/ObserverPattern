@@ -22,6 +22,6 @@ COIS4000H.announcement("What exciting ideas do you have for the software project
 COIS4000H.delete(Natasha); // Deleting object from the arraylist 
 COIS3040H.announcement("Learn all the Design Patterns for the final exam"); //Creating new announcement 
 COIS3400H.delete(Nicholas); // Deleting object from the arraylist 
-COIS3400H.announcement("Monday's class cancelled due to Bad weather conditions in peterborough "); //Creating new announcement 
+COIS3400H.announcement("Monday's class cancelled due to Bad weather conditions in Peterborough "); //Creating new announcement 
 }
 }

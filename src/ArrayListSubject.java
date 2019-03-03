@@ -39,7 +39,7 @@ System.out.println();
 //after updating the announcement.
 public void announcement(String announcement)
 {
-System.out.println("\nAnnouncement from " + course + "=>  " + announcement + "\n");
+System.out.println("\nAnnouncement from " + course + " =>  " + announcement + "\n");
 notifyAllObjects(announcement);
 }
 }
@@ -52,7 +52,7 @@ this.studentName = studentName;
 //This method will be called to update all students regarding the new announcement posted by celebrity.
 @Override
 public void update(String course , String announcement) {
-System.out.println(studentName + " has received the announcement from "+ course + "=>  "+  announcement);
+System.out.println(studentName + " has received the announcement from "+ course + " =>  "+  announcement);
 }
 @Override
 public String toString() {
