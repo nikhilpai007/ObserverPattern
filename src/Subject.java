@@ -1,6 +1,6 @@
-//This Class handles adding, deleting and updating all Objects
+//This Interface handles appending, deleting and notifying all Objects.
 interface Subject{
-public void append(Object obj);
-public void delete(Object obj);
-public void notifyAllObjects(String s);
+public void append(Object obj); //Method to append the object 
+public void delete(Object obj); // Method to delete the object 
+public void notifyAllObjects(String s);  //Method to notify all the objects
 }

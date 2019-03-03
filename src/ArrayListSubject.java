@@ -1,35 +1,36 @@
 import java.util.ArrayList;
 
-//The Objects update method is called when the Subject changes
+//The update method is called when the Subject changes
 interface Object{
 public void update(String name, String s);
 }
 //This class extends Subject interface.
 class ArrayListSubject implements Subject{
-private String course;  //name of the celebrity
+private String course;  //name of the courses
 private ArrayList<Object> students;  //list of students
-public ArrayListSubject(String course) {
-this.course = course;
-students = new ArrayList<Object>();
+public ArrayListSubject(String course) { //constructor 
+this.course = course; 
+students = new ArrayList<Object>(); // Creating an ArrayList of objects
 }
-//add follower to the celebrity's appended follower list
+//append students to the courses list 
 @Override
-public void append(Object obj) {
-students.add(obj);
-System.out.println(obj + " has been added to the course " + course);
+public void append(Object obj) { 
+students.add(obj); //adding objects (students) to the ArrayList
+System.out.println(obj + " has been added to the course " + course); //printing the output for append 
 }
-//remove follower from celebrity's appended follower list
+//deleting (dropping) a course by student
+// Basically deleting object -student from the course 
 @Override
 public void delete(Object obj) {
-students.remove(obj);
-System.out.println(obj + " has dropped the course " + course);
+students.remove(obj); //removing the object (student)
+System.out.println(obj + " has dropped the course " + course); //printing the output for deleting 
 }
 //Notify all the appended students
 @Override
 public void notifyAllObjects(String announcement) {
-for(Object follower : students)
+for(Object student : students)
 {
-follower.update(course, announcement);
+student.update(course, announcement);
 }
 System.out.println();
 }
@@ -43,10 +44,10 @@ notifyAllObjects(announcement);
 }
 }
 // This class extends Object interface.
-class Follower implements Object{
+class student implements Object{
 private String studentName;
-public Follower(String followerName) {
-this.studentName = followerName;
+public student(String studentName) {
+this.studentName = studentName;
 }
 //This method will be called to update all students regarding the new announcement posted by celebrity.
 @Override
